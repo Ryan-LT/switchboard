@@ -1,0 +1,5 @@
+{
+  "name": "switchboard-mods",
+  "owner": { "name": "Ryan-LT" },
+  "plugins": [{ "name": "switchboard", "source": "./mods/switchboard", "description": "/find inside Claude Code: the chat a reply, link or task belongs to" }]
+}

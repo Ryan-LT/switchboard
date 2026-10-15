@@ -1,0 +1,31 @@
+{
+  "name": "switchboard",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local command center for every Claude conversation: what each one is, what's going on, and what has ended.",
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n agent,web -c blue,magenta \"pnpm --filter @switchboard/agent dev\" \"pnpm --filter @switchboard/web dev\"",
+    "build": "pnpm --filter @switchboard/web build",
+    "start": "pnpm build && pnpm --filter @switchboard/agent start",
+    "typecheck": "pnpm -r typecheck",
+    "hooks:print": "pnpm --filter @switchboard/agent hooks:print",
+    "hooks:install": "pnpm --filter @switchboard/agent hooks:install",
+    "autostart:install": "pnpm build && pnpm --filter @switchboard/agent autostart:install",
+    "autostart:uninstall": "pnpm --filter @switchboard/agent autostart:uninstall",
+    "test": "pnpm --filter @switchboard/agent test",
+    "lint:fsd": "pnpm --filter @switchboard/web lint:fsd"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
