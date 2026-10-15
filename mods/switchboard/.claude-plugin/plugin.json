@@ -1,0 +1,7 @@
+{
+  "name": "switchboard",
+  "version": "0.2.0",
+  "author": { "name": "Ryan-LT" },
+  "description": "/find: which Claude chat a teammate's reply, an issue/PR link or a task belongs to, with a button to continue it. Reads the local Claude Board agent.",
+  "types": "./types/index.d.ts"
+}

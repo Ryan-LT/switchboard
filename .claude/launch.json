@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "switchboard",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@switchboard/agent", "start"],
+      "port": 4317
+    }
+  ]
+}
